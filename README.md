@@ -16,3 +16,11 @@
   - Tích hợp liền mạch với các nhà cung cấp đám mây, tăng hoặc giảm quy mô tài nguyên cơ sở hạ tầng một cách hiệu quả dựa trên nhu cầu.
   - IaC cung cấp một ngôn ngữ chung cho cả hai nhà phát triển và vận hành. Các thay đổi có thể được xem xét một cách minh bạch, điều này thúc đẩy sự cộng tác tốt hơn trong môi trường DevOps.
 # 2. Terraform
+## 2.1. Lý thuyết: tìm hiểu về Terraform
+- Terraform là tool IaC của HashiCorp. 
+## 2.2. Triển khai
+- Cài đặt Terraform:
+
+  Chi tiết xem tại https://developer.hashicorp.com/terraform/install
+
+- 
