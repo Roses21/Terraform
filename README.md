@@ -111,14 +111,41 @@ Kết quả là đã tạo thành công một EC2 instance có tên *terraform_i
 ![{3A820CC7-5721-43FB-B552-F3C1A8A828C5}](https://github.com/user-attachments/assets/be5287a1-0283-42ce-b5b5-047896274ef6)
 
 # 4. Terraform với GitHub Actions
-Các bước cơ bản bao gồm: 
-- Lưu trữ mã Terraform trên GitHub.
-- Sau đó, định cấu hình quy trình làm việc GitHub Actions chuyên dụng dựa trên nhu cầu của tổ chức để xử lý các thay đổi về cơ sở hạ tầng bằng cách cập nhật tệp cấu hình Terraform.
-### Bước 1: Tạo GitHub repository
-Repository → Settings → Secrets and variables → Actions → 
-### Bước 2: 
+## 4.1. GitHub Actions
+Là một công cụ CI/CD hiện đại được tích hợp vào GitHub, cho phép bạn tự động hóa toàn bộ quy trình phát triển phần mềm từ xây dựng, kiểm thử, đến triển khai.
+  
+  ![{11AEE770-43FD-47D1-8671-3E4663F3A4D6}](https://github.com/user-attachments/assets/7009462d-cf93-44e0-95fa-e980f2bc8b06)
+ 
+## 4.2. Thực hiện
+- Prerequisites:
+  - 1 tài khoản GitHub
+  - 1 tài khoản [HCP Terraform](https://app.terraform.io/session)
+  - 1 tài khoản AWS đã được cấp các quyền cần thiết.
+- Các bước cơ bản bao gồm: 
+  - Lưu trữ mã Terraform trên GitHub.
+  - Sau đó, định cấu hình quy trình làm việc GitHub Actions chuyên dụng dựa trên nhu cầu của tổ chức để xử lý các thay đổi về cơ sở hạ tầng bằng cách cập nhật tệp cấu hình Terraform.
+
+### Bước 1: Set up HCP Terraform
+- Tạo workspace có tên *learn-terraform-github-actions*.
+- Thêm biến:
+
+  ![{A8605133-1743-4795-84E1-05A3D592F055}](https://github.com/user-attachments/assets/7760a745-84f2-4788-86cc-5aeeca43eb39)
+
+- Tạo 1 API token: tại trang https://app.terraform.io/app/settings/tokens?utm_source=learn
+  
+### Bước 2: Tạo GitHub repository
+- Tạo repo có tên *Terraform*.
+- Tạo secret để lưu giá trị access key đã tạo cho IAM user:
+  *Repository → Settings → Secrets and variables → Actions → New repository secret* → Nhập token:
+
+ ![{3827E75E-60C8-429A-A257-A65CF80F6657}](https://github.com/user-attachments/assets/a8b88a5d-c7b8-4c42-913b-be34d30c5178)
+
+- Clone repository to local machine.
+
+### Bước 3: Tạo các file cần thiết
+- 
+
 # Tài liệu tham khảo
 - https://k21academy.com/terraform-iac/terraform-beginners-guide/
 - https://spacelift.io/blog/terraform-tutorial 
-- https://spacelift.io/blog/github-actions-terraform
 - https://medium.com/@fawazcp/create-ec2-instance-using-terraform-71776acf16e3
