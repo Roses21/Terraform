@@ -7,4 +7,6 @@ variable "region" {
 variable "project_name" {
   description = "Demo CI/CD AWS of the project"
   type        = string
+  default     = "my_project_name" # Thêm giá trị mặc định
 }
+
