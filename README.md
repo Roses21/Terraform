@@ -70,14 +70,50 @@ Demo cơ bản: tạo EC2 instance với Terraform.
   
   ![{216BE6D5-D4A7-467D-9255-182C0720D39C}](https://github.com/user-attachments/assets/dcf8bd40-b3bc-4040-b861-bcb44194459b)
 
-### Bước 2: 
-*Nên cài extension Terraform để giao diện dễ nhìn và được hỗ trợ tự động về syntax HCL.*
+### Bước 2: Tạo file cấu hình 
+*Nên cài extension Terraform để giao diện dễ nhìn và tự động gợi ý về syntax HCL.*
 
-- Tạo file mới đặt tên là *create_instance.tf*
+- Tạo file mới đặt tên là *create_instance.tf* có nội dung như sau:
+  
+ ![{2AD2210F-0FCF-4089-8430-3C1A4E6A85FB}](https://github.com/user-attachments/assets/36b26cfc-85d1-4e3e-81a7-a345789aafd4)
+
+### Bước 3: 
+- Chạy lệnh: ```terraform init``` - lệnh sẽ kiểm tra nhà cung cấp (là AWS) và cài đặt các plugin cần thiết cho AWS trong thư mục làm việc hiện tại.
+
+  ![{188F4EA6-42B7-496A-A9C1-DDA53CB14DCB}](https://github.com/user-attachments/assets/f7a66baa-99b3-4b7f-a88b-7f87c12a8662)
+
+- Sau khi chạy xong, sẽ tạo tự động:
+
+  ![{8CEC8BC6-2CB7-40A6-8039-B66B17875AAD}](https://github.com/user-attachments/assets/0d6d6880-dde1-4cc1-8f36-fc788990fc94)
+
+- Chạy lệnh: ```terraform validate``` để kiểm tra syntax của file.
+  
+  ![{FCA21D13-1B9C-40A4-922B-7BEB13E1CAE1}](https://github.com/user-attachments/assets/1ba99125-01ea-40d1-b373-15f1b49ddc39)
+
+- Chạy lệnh: ```terraform plan``` - hiển thị một bảng mô tả về việc script sẽ làm những gì.
+
+  ![{3200CEDB-1411-445F-9D35-99CA9E3C2A4B}](https://github.com/user-attachments/assets/3607bb2a-ff3b-4a6c-8d3d-4126374be5d8)
+
+- Chạy lệnh: ```terraform apply```
+  
+  ![{42E3ECD0-80A4-4F0E-A58A-7F50C01BFA84}](https://github.com/user-attachments/assets/943847a7-36aa-4788-a66f-c93c92018562)
+
+### Bước 4: Kiểm tra 
+Kết quả là đã tạo thành công một EC2 instance có tên *terraform_instance_demo*.
+
+![{9CB106F1-8872-4C3D-BD8B-726E3B7C982C}](https://github.com/user-attachments/assets/9bbed810-d608-4c1d-91e2-99c71313d2a7)
+
+### Bước 5: Dọn dẹp tài nguyên
+Để xóa những tài nguyên được tạo từ file config, sử dụng lệnh ```terraform destroy```.
+
+![{45A3B0DA-2057-413E-A8B9-E3A517C92E3A}](https://github.com/user-attachments/assets/4e535aa7-37e4-4acd-8161-10736fa8b304)
+
+![{3A820CC7-5721-43FB-B552-F3C1A8A828C5}](https://github.com/user-attachments/assets/be5287a1-0283-42ce-b5b5-047896274ef6)
+
 # 4. Terraform với GitHub Actions
 
 # Tài liệu tham khảo
 - https://k21academy.com/terraform-iac/terraform-beginners-guide/
 - https://spacelift.io/blog/terraform-tutorial 
 - https://spacelift.io/blog/github-actions-terraform
-- https://spacelift.io/blog/terraform-ec2-instance
+- https://medium.com/@fawazcp/create-ec2-instance-using-terraform-71776acf16e3
