@@ -145,6 +145,10 @@ Là một công cụ CI/CD hiện đại được tích hợp vào GitHub, cho p
 ### Bước 3: Tạo các file cần thiết
 - 
 
+- Sau khi tạo xong file .yaml sẽ tự động thực hiện các quy trình như sau (nếu có lỗi ở bước nào sẽ dừng lại và thông báo lỗi cụ thể):
+
+  ![{5B38BEF3-3197-4BCF-AE14-33C23F4A7BBC}](https://github.com/user-attachments/assets/094787e3-cc1f-4357-90a2-ff53faaa97e6)
+
 # Tài liệu tham khảo
 - https://k21academy.com/terraform-iac/terraform-beginners-guide/
 - https://spacelift.io/blog/terraform-tutorial 
