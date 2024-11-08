@@ -48,7 +48,7 @@
   - *variables.tf*: là file chứa thông tin về các biến.
   - *outputs.tf*: dùng để export value sau khi terraform apply đã thực thi hoàn tất.
 ## 2.3 HCL syntax
-
+  https://developer.hashicorp.com/terraform/language/syntax/configuration  
 # 3. Terraform với AWS
 Demo cơ bản: tạo EC2 instance với Terraform.
 
@@ -111,7 +111,12 @@ Kết quả là đã tạo thành công một EC2 instance có tên *terraform_i
 ![{3A820CC7-5721-43FB-B552-F3C1A8A828C5}](https://github.com/user-attachments/assets/be5287a1-0283-42ce-b5b5-047896274ef6)
 
 # 4. Terraform với GitHub Actions
-
+Các bước cơ bản bao gồm: 
+- Lưu trữ mã Terraform trên GitHub.
+- Sau đó, định cấu hình quy trình làm việc GitHub Actions chuyên dụng dựa trên nhu cầu của tổ chức để xử lý các thay đổi về cơ sở hạ tầng bằng cách cập nhật tệp cấu hình Terraform.
+### Bước 1: Tạo GitHub repository
+Repository → Settings → Secrets and variables → Actions → 
+### Bước 2: 
 # Tài liệu tham khảo
 - https://k21academy.com/terraform-iac/terraform-beginners-guide/
 - https://spacelift.io/blog/terraform-tutorial 
