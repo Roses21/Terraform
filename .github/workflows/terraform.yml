@@ -3,39 +3,42 @@ name: Terraform CI/CD
 on:
   push:
     branches:
-      - main
-  pull_request:
+      - main  # Chạy khi có thay đổi trên nhánh main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Bước checkout mã nguồn từ repo
+      # Bước 1: Lấy mã nguồn từ repo
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Cấu hình AWS credentials từ Secrets
+      # Bước 2: Thiết lập AWS credentials
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-southeast-1
+          aws-region: ap-southeast-1  # Khu vực AWS
 
-      # Khởi tạo Terraform
+      # Bước 3: Khởi tạo Terraform
       - name: Terraform Init
+        working-directory: ./GitHubActions_Terraform  # Thư mục chứa file .tf
         run: terraform init
 
-      # Định dạng Terraform
+      # Bước 4: Kiểm tra định dạng Terraform
       - name: Terraform Format
+        working-directory: ./GitHubActions_Terraform
         run: terraform fmt -check
 
-      # Lập kế hoạch Terraform
+      # Bước 5: Lên kế hoạch Terraform
       - name: Terraform Plan
+        working-directory: ./GitHubActions_Terraform
         run: terraform plan
 
-      # Áp dụng Terraform (nếu cần)
+      # Bước 6: Triển khai Terraform nếu là nhánh main
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
+        working-directory: ./GitHubActions_Terraform
         run: terraform apply -auto-approve
