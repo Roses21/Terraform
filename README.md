@@ -66,9 +66,7 @@ Demo cơ bản: tạo EC2 instance với Terraform.
 ## 3.3. Terraform connect with AWS
 ### Bước 1: Access tài khoản AWS IAM sử dụng access key và secret key.
 - Tạo IAM user trên AWS, cấp quyền AdministratorAccess. Sau đó tạo access key cho use case *CLI*, cần lưu lại thông tin *Access key* và *Secret access key*.
-- Mở terminal của Vscode, chạy lệnh sau để cấu hình:
-  
-  ![{216BE6D5-D4A7-467D-9255-182C0720D39C}](https://github.com/user-attachments/assets/dcf8bd40-b3bc-4040-b861-bcb44194459b)
+- Mở terminal của Vscode, chạy lệnh ```aws configure``` để cấu hình và nhập các thông tin cần thiết (gồm Access Key ID và Secret Access Key).
 
 ### Bước 2: Tạo file cấu hình 
 *Nên cài extension Terraform để giao diện dễ nhìn và tự động gợi ý về syntax HCL.*
