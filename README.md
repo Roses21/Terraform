@@ -149,6 +149,22 @@ Là một công cụ CI/CD hiện đại được tích hợp vào GitHub, cho p
 
   ![{5B38BEF3-3197-4BCF-AE14-33C23F4A7BBC}](https://github.com/user-attachments/assets/094787e3-cc1f-4357-90a2-ff53faaa97e6)
 
+### Bước 4: 
+Nếu GitHub báo lỗi về cấu hình, bạn có thể tìm xem file .tf nào đang bị lỗi bằng lệnh ```terraform fmt``` (lưu ý chọn đúng thư mục chứa file.)
+
+Nếu tìm được lỗi, sẽ báo tên file chứa lỗi và sau đó tự động fix lỗi.
+
+![{CD5BE8DE-CD8F-4F73-9EA6-7EE1B098AA1B}](https://github.com/user-attachments/assets/ab9cd0aa-b8e9-4913-bc1f-5a3803d53d2c)
+
+### Bước 5: Kiểm tra kết quả
+- Nếu thành công sẽ xuất hiện biểu tượng này tại repo của GitHub:
+
+![{87C03AA6-1271-4080-BEE0-10ADF9A9AE16}](https://github.com/user-attachments/assets/805b0980-d7fc-427c-940c-bc313f35adde)
+
+- Kiểm tra trên AWS:
+
+![{899AD3B7-F1EE-4829-8CFD-0C601119319C}](https://github.com/user-attachments/assets/44ae403c-0661-4532-b018-f9ff17e57278)
+
 # Tài liệu tham khảo
 - https://k21academy.com/terraform-iac/terraform-beginners-guide/
 - https://spacelift.io/blog/terraform-tutorial 
