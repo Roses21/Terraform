@@ -136,14 +136,12 @@ Là một công cụ CI/CD hiện đại được tích hợp vào GitHub, cho p
 ### Bước 2: Tạo GitHub repository
 - Tạo repo có tên *Terraform*.
 - Tạo secret để lưu giá trị access key đã tạo cho IAM user:
-  *Repository → Settings → Secrets and variables → Actions → New repository secret* → Nhập token:
+  *Repository → Settings → Secrets and variables → Actions → New repository secret* → Nhập lần lượt tên và giá trị của Access Key.
 
- ![{3827E75E-60C8-429A-A257-A65CF80F6657}](https://github.com/user-attachments/assets/a8b88a5d-c7b8-4c42-913b-be34d30c5178)
-
-- Clone repository to local machine.
+- Clone repository to local machine: để thuận tiện cho quá trình troubleshoot.
 
 ### Bước 3: Tạo các file cần thiết
-- 
+- Tạo các file với cấu hình EC2 instance mong muốn (xem nội dung chi tiết của các file .tf tại repo này). 
 
 - Sau khi tạo xong file .yaml sẽ tự động thực hiện các quy trình như sau (nếu có lỗi ở bước nào sẽ dừng lại và thông báo lỗi cụ thể):
 
