@@ -165,9 +165,12 @@ Nếu tìm được lỗi, sẽ báo tên file chứa lỗi và sau đó tự đ
 
 ![{899AD3B7-F1EE-4829-8CFD-0C601119319C}](https://github.com/user-attachments/assets/44ae403c-0661-4532-b018-f9ff17e57278)
 
-- Khi tôi xóa instance, GitHub Actions sẽ tiếp tục kiểm tra và tạo lại instance mới, tức là luôn đảm bảo tồn tại 1 instance trên môi trường AWS:
+- Khi tôi xóa instance, GitHub Actions sẽ tiếp tục kiểm tra và tạo lại instance mới, tức là luôn đảm bảo tồn tại ít nhất 1 instance trên môi trường AWS. Khi bạn thay đổi bất kỳ phần nào trong repo này (kể cả file .md, không phải file .tf) thì GitHub Actions cũng sẽ thực hiện lại toàn bộ quy trình và tạo ra 1 instance mới:
 
 ![{B32B438A-3017-4376-867F-DF301A6424A3}](https://github.com/user-attachments/assets/845c5472-fc91-4045-8aed-52996dc0d03b)
+
+![{CB35FC03-FD5D-47D3-9B83-09FFF61D5683}](https://github.com/user-attachments/assets/6626359e-3f07-4e70-a722-374c5f5fb5e6)
+
 
 ### Bước 6: Dọn dẹp tài nguyên
 - Vô hiệu hóa GitHub Actions cho toàn bộ repo: Settings -> Actions -> Actions permissions -> Disable Actions
