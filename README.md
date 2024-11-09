@@ -165,6 +165,14 @@ Nếu tìm được lỗi, sẽ báo tên file chứa lỗi và sau đó tự đ
 
 ![{899AD3B7-F1EE-4829-8CFD-0C601119319C}](https://github.com/user-attachments/assets/44ae403c-0661-4532-b018-f9ff17e57278)
 
+- Khi tôi xóa instance, GitHub Actions sẽ tiếp tục kiểm tra và tạo lại instance mới, tức là luôn đảm bảo tồn tại 1 instance trên môi trường AWS:
+
+![{B32B438A-3017-4376-867F-DF301A6424A3}](https://github.com/user-attachments/assets/845c5472-fc91-4045-8aed-52996dc0d03b)
+
+### Bước 6: Dọn dẹp tài nguyên
+- Vô hiệu hóa GitHub Actions cho toàn bộ repo: Settings -> Actions -> Actions permissions -> Disable Actions
+- Xóa EC2 instance trên AWS.
+  
 # Tài liệu tham khảo
 - https://k21academy.com/terraform-iac/terraform-beginners-guide/
 - https://spacelift.io/blog/terraform-tutorial 
