@@ -3,7 +3,7 @@ resource "aws_instance" "terraform_cicd_demo" {
   instance_type          = "t2.micro"
   availability_zone      = "ap-southeast-1a"
   key_name               = "terraform_keypair"
-  vpc_security_group_ids = ["sg-03a4cc4d776b59709"]
+  vpc_security_group_ids = ["<security group ID>"]
   tags = {
     Name = "terraform_instance_demo"
   }
