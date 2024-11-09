@@ -171,8 +171,9 @@ Nếu tìm được lỗi, sẽ báo tên file chứa lỗi và sau đó tự đ
 
 
 ### Bước 6: Dọn dẹp tài nguyên
-- Vô hiệu hóa GitHub Actions cho toàn bộ repo: Settings -> Actions -> Actions permissions -> Disable Actions
+- Vô hiệu hóa GitHub Actions cho toàn bộ repo: *Settings -> Actions -> Actions permissions -> Disable Actions*
 - Xóa EC2 instance trên AWS.
+- Xóa IAM user đã tạo để thực hiện bài lab này.
   
 # Tài liệu tham khảo
 - https://k21academy.com/terraform-iac/terraform-beginners-guide/
